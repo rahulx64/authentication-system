@@ -1,1 +1,17 @@
-hello
+
+{
+     mxcZzkV9DzO7rJZm
+}
+{
+     mongodb+srv://rahulxyad:<db_password>@cluster0.ewxsl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+}
+
+
+
+
+normal js is not use import so to add modeule add "type":"module" in package.json
+
+-----------------
+load dotenv in index.js where database function called so that enviroment variable loaded properly
+
+
