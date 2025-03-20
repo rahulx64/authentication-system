@@ -12,6 +12,12 @@
 normal js is not use import so to add modeule add "type":"module" in package.json
 
 -----------------
-load dotenv in index.js where database function called so that enviroment variable loaded properly
+load dotenv in index.js where database function called so that enviroment variable loaded properly  then dotenv is load in all nestend file from index.js to deep in the tree
+
+
+
+mailtrap
+
+npm i mailtrap
 
 

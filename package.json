@@ -4,7 +4,7 @@
   "main": "backend/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"nodemon backend/index.js"
+    "dev": "nodemon backend/index.js"
   },
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
   },
   "keywords": [],
   "author": "",
-  "type":"module",
+  "type": "module",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rahulx64/authentication-system/issues"
