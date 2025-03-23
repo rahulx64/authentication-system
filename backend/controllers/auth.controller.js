@@ -38,8 +38,8 @@ export const signup = async (req, res) => {
 
     // res.send(user);
 
-    const x = generatetokenandsetcookie(res, user._id);
-    console.log(x);
+     generatetokenandsetcookie(res, user._id);
+
     await sendverificationemail(user.email, verifcationcode);
 
     res.status(201).json({
@@ -190,5 +190,19 @@ export const resetpassword= async (req, res) => {
   catch(err){
     console.log("error in reset password route damaged",err);
     res.status(400).json({success:false,message:err.message});
+  }
+};
+
+export const checkauth = async (req, res) => {
+  try {
+    const user = await User.findById(req.userid).select("-password");
+    if (!user) {
+      return res
+        .status(400)
+        .json({ success: false, message: "User not found" });
+    }
+    res.status(200).json({ success: true, user });
+  } catch (err) {
+    res.status(400).json({ success: false, message: err.message });
   }
 };

@@ -2,7 +2,7 @@ import express from 'express';
 
 import { connectDB } from './db/connectDB.js';
 import dotenv from "dotenv";
-
+import cookieParser from 'cookie-parser';
 import authRoutes from './routes/auth.route.js';
 const app = express();
 dotenv.config();
@@ -10,6 +10,7 @@ app.get('/',(req,res)=>{
      res.send('Hello world g');
 });
 app.use(express.json()); //allow us to parse incoming request  it work like middle ware 
+app.use(cookieParser());
  app.use("/api/auth",authRoutes);
 // console.log(Object.keys(app));
 // console.log(Object.keys(app.get));
